@@ -38,11 +38,17 @@ body, html {
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     padding: 10px;
     border-radius: 5px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #hyperlink {
     text-decoration: none;
     color: black;
+    font-size: 24pt;
+    text-align: center;
   }
 
   #hyperlink:hover {
@@ -50,13 +56,34 @@ body, html {
   }
   
   @keyframes rainbow {
-    0% { background-color: red; }
-    14% { background-color: orange; }
-    28% { background-color: yellow; }
-    42% { background-color: green; }
-    57% { background-color: blue; }
-    71% { background-color: indigo; }
-    85% { background-color: violet; }
-    100% { background-color: red; }
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+  }
+
+  #tap-me {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      bottom: 10%;
+    }
+    50% {
+      bottom: 15%;
+    }
   }
   
